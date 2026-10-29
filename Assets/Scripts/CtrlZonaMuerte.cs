@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CtrlZonaMuerte : MonoBehaviour
 {
@@ -7,7 +6,7 @@ public class CtrlZonaMuerte : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            collision.GetComponent<CtrlJugador>().QuitarVida();
         }
     }
 }

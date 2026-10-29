@@ -1,4 +1,3 @@
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +7,12 @@ public class CtrlJugador : MonoBehaviour
     [SerializeField] private Rigidbody2D fisica;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private int fuerzaSalto;
-    private Animator animacion;
+    [SerializeField] private string primerNivel = "Nivel1";
+
     public static int vidas = 5;
     public static int muertes = 0;
-    [SerializeField] private string primerNivel = "Nivel1";
+
+    private Animator animacion;
     private bool vulnerable = true;
 
     void Awake()
